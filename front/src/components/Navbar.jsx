@@ -6,7 +6,7 @@ import { setMode } from "state";
 import me from "../assets/me.jpg";
 import { AppBar, Button, Box, Typography, IconButton, InputBase, Toolbar, Menu, MenuItem, useTheme } from "@mui/material";
 
-const Navbar = () => {
+const Navbar = ({isSidebarOpen, setIsSidebarOpen}) => {
     const dispatch = useDispatch();
     const theme = useTheme();
   return (
@@ -20,7 +20,7 @@ const Navbar = () => {
             {/* left */}
 
             <FlexBetween>
-                <IconButton onClick={() => console.log('open/close')}>
+                <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                     <MenuIcon />
                 </IconButton>
                 <FlexBetween
