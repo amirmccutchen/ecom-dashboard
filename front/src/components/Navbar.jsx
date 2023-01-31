@@ -6,7 +6,7 @@ import { setMode } from "state";
 import me from "../assets/me.jpg";
 import { AppBar, Button, Box, Typography, IconButton, InputBase, Toolbar, Menu, MenuItem, useTheme } from "@mui/material";
 
-const Navbar = ({isSidebarOpen, setIsSidebarOpen}) => {
+const Navbar = ({ isSidebarOpen, setIsSidebarOpen, user }) => {
     const dispatch = useDispatch();
     const theme = useTheme();
   return (

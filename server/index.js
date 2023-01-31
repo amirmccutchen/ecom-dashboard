@@ -41,7 +41,7 @@ mongoose.connect(process.env.MONGO_URL, {
     useUnifiedTopology: true,})
       .then(() => {
         app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
-        // adding data once
+        // initializing user data
         // User.insertMany(dataUser);
       })
       .catch(error => console.log(`${error} did not connect`));
