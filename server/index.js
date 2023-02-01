@@ -16,7 +16,7 @@ import salesRoutes from './routes/sales.js';
 // import Product from './models/Product.js';
 // import ProductStats from './models/ProductStats.js';
 // import Transaction from './models/Transaction.js';
-import { dataUser, dataProduct, dataProductStats, dataTransaction } from './sampleData/index.js';
+// import { dataUser, dataProduct, dataProductStats, dataTransaction } from './sampleData/index.js';
 
 // config
 
