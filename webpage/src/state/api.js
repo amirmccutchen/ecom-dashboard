@@ -16,4 +16,4 @@ export const api = createApi({
     }),
 });
 
-export const { useGetUserQuery, useGetProducts } = api;
+export const { useGetUserQuery, useGetProductsQuery } = api;

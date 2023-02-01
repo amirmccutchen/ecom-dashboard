@@ -1,6 +1,5 @@
-import { json } from 'body-parser';
-import Product from '../models/Product';
-import ProductStats from '../models/ProductStats';
+import Product from '../models/Product.js';
+import ProductStats from '../models/ProductStats.js';
 
 export const getProducts = async (req, res ) => {
     try {
