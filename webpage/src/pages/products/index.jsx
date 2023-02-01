@@ -51,14 +51,8 @@ const Product = ({ _id, name, description, price, rating, category, supply, stat
         }}
       >
         <CardContent>
-          <Typography>Name: {_id}</Typography>
+          <Typography>Product ID: {_id}</Typography>
           <Typography>Inventory: {supply}</Typography>
-          <Typography>
-            Annual Sales: {stat.yearlySalesTotal}
-          </Typography>
-          <Typography>
-            Annual Units Sold: {stat.yearlyTotalSoldUnits}
-          </Typography>
         </CardContent>
       </Collapse>
     </Card>
@@ -71,7 +65,7 @@ const Products = () => {
 
   return (
     <Box m="1.5rem 2.5rem">
-      <Header title="PRODUCTS" subtitle="See your list of products." />
+      <Header title="PRODUCTS" subtitle="View Products" />
       {data || !isLoading ? (
         <Box
           mt="20px"
