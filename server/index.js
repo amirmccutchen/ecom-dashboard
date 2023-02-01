@@ -10,13 +10,13 @@ import generalRoutes from './routes/general.js';
 import managementRoutes from './routes/management.js';
 import salesRoutes from './routes/sales.js';
 
-// data
+// data, uncomment when adding new data to db from (sample)data folder
 
-import User from './models/User.js';
-import Product from './models/Product.js';
-import ProductStats from './models/ProductStats.js';
+// import User from './models/User.js';
+// import Product from './models/Product.js';
+// import ProductStats from './models/ProductStats.js';
+// import Transaction from './models/Transaction.js';
 import { dataUser, dataProduct, dataProductStats, dataTransaction } from './sampleData/index.js';
-import Transaction from './models/Transaction.js';
 
 // config
 
