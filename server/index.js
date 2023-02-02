@@ -19,7 +19,7 @@ import salesRoutes from './routes/sales.js';
 // import OverallStats from './models/OverallStats.js';
 // import { dataUser, dataProduct, dataProductStats, dataTransaction, dataOverallStats } from './sampleData/index.js';
 
-// config
+// configuration
 
 dotenv.config();
 const app = express();
