@@ -9,6 +9,7 @@ import Dashboard from './pages/dashboard';
 import Products from 'pages/products';
 import Customers from 'pages/customers';
 import Transactions from 'pages/transactions';
+import Geography from 'pages/geography';
 
 const App = () => {
   const mode = useSelector((state) => state.global.mode);
@@ -21,10 +22,11 @@ const App = () => {
           <Routes>
             <Route element = {<Layout />}>
               <Route path = '/' element = {<Navigate to = '/dashboard' replace />} />
-              <Route path = '/dashboard'    element = {<Dashboard />} />
-              <Route path = '/products'     element = {<Products /> } />
-              <Route path = '/customers'    element = {<Customers />} />
-              <Route path = '/transactions' element = {<Transactions />} />
+              <Route path = '/dashboard'    element = {<Dashboard />}   />
+              <Route path = '/products'     element = {<Products  />}   />
+              <Route path = '/customers'    element = {<Customers />}   />
+              <Route path = '/transactions' element = {<Transactions/>} />
+              <Route path = '/geography'    element = {<Geography />}   />
             </Route>
           </Routes>
         </ThemeProvider>

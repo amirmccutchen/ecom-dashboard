@@ -2,6 +2,7 @@ import Product from '../models/Product.js';
 import ProductStats from '../models/ProductStats.js';
 import Transaction from '../models/Transaction.js';
 import User from '../models/User.js';
+import getCountryIso3 from 'country-iso-2-to-3';
 
 // get products
 
