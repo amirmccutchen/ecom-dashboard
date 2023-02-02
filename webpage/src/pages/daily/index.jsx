@@ -7,6 +7,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
 const Daily = () => {
+
   const [startDate, setStartDate] = useState(new Date('2021-02-01'));
   const [endDate, setEndDate] = useState(new Date('2021-03-01'));
   const { data } = useGetSalesQuery();
@@ -36,6 +37,7 @@ const Daily = () => {
           ...totalSalesLine.data,
           { x: splitDate, y: totalSales },
         ];
+
         totalUnitsLine.data = [
           ...totalUnitsLine.data,
           { x: splitDate, y: totalUnits },
@@ -46,11 +48,14 @@ const Daily = () => {
     const formattedData = [totalSalesLine, totalUnitsLine];
     return [formattedData];
   }, [data, startDate, endDate]);
+
   return (
+
     <Box m = '1.5rem 2.5rem'>
       <Header title = 'DAILY SALES' subtitle = 'Visual of Daily Sales' />
       <Box height = '75vh'>
         <Box display = 'flex' justifyContent = 'flex-end'>
+
           <Box>
             <DatePicker
               selected = {startDate}
@@ -60,6 +65,7 @@ const Daily = () => {
               endDate = {endDate}
             />
           </Box>
+
           <Box>
             <DatePicker
               selected = {endDate}
@@ -70,6 +76,7 @@ const Daily = () => {
               minDate = {startDate}
             />
           </Box>
+
         </Box>
 
         {data ? (
@@ -108,6 +115,7 @@ const Daily = () => {
                 },
               },
             }}
+
             colors = {{ datum: 'color' }}
             margin = {{ top: 50, right: 50, bottom: 70, left: 60 }}
             xScale = {{ type: 'point' }}
@@ -118,6 +126,7 @@ const Daily = () => {
               stacked: false,
               reverse: false,
             }}
+
             yFormat = ' >-.2f'
             curve = 'catmullRom'
             axisTop = {null}
@@ -131,6 +140,7 @@ const Daily = () => {
               legendOffset: 60,
               legendPosition: 'middle',
             }}
+
             axisLeft = {{
               orient: 'left',
               tickSize: 5,
@@ -140,6 +150,7 @@ const Daily = () => {
               legendOffset: -50,
               legendPosition: 'middle',
             }}
+            
             enableGridX = {false}
             enableGridY = {false}
             pointSize = {10}

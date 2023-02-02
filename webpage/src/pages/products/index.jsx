@@ -3,7 +3,7 @@ import { Box, Card, CardActions, CardContent, Collapse, Button, Typography, Rati
 import Header from 'components/Header';
 import { useGetProductsQuery } from 'state/api';
 
-const Product = ({ _id, name, description, price, rating, category, supply, stat, }) => {
+const Product = ({ _id, name, description, price, rating, category, supply, }) => {
   const theme = useTheme();
   const [isExpanded, setIsExpanded] = useState(false);
 
