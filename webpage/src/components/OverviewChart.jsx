@@ -42,14 +42,14 @@ const OverviewChart = ({ isDashboard = false, view }) => {
     );
 
     return [[totalSalesLine], [totalUnitsLine]];
-  }, [data]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [data]);
 
   if (!data || isLoading) return 'Loading...';
 
   return (
     <ResponsiveLine
-      data={view === 'sales' ? totalSalesLine : totalUnitsLine}
-      theme={{
+      data = {view === 'sales' ? totalSalesLine : totalUnitsLine}
+      theme = {{
         axis: {
           domain: {
             line: {

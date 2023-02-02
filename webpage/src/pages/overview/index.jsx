@@ -11,7 +11,7 @@ const Overview = () => {
     <Box m = '1.5rem 2.5rem'>
       <Header
         title = 'OVERVIEW'
-        subtitle = 'Overview of general revenue and profit'
+        subtitle = 'Overview of Revenue and Units Sold'
       />
       <Box height = '75vh'>
         <FormControl sx = {{ mt: '1rem' }}>
