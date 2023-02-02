@@ -9,7 +9,7 @@ const Transactions = () => {
 
   const theme = useTheme();
 
-  // values to be sent to the backend
+  // values sent to the backend
   const [page, setPage] = useState(0);
   const [pageSize, setPageSize] = useState(20);
   const [sort, setSort] = useState({});
