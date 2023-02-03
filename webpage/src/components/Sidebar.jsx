@@ -105,8 +105,8 @@ const Sidebar = ({ drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobile, us
             >
                 <Box width = '100%' >
                     <Box m = '1.5rem 2rem 1.5rem 4.5rem' onClick={routeChange} sx = {{ cursor: 'pointer' }}>
-                        <FlexBetween color = {theme.palette.secondary.main}>
-                            <Box display= 'flex' alignItems = 'center' gap = '0.5rem'>
+                        <FlexBetween color = {theme.palette.secondary[100]}>
+                            <Box display = 'flex' alignItems = 'center' gap = '0.5rem'>
                                 <Typography variant = 'h3' fontWeight = 'bold'>
                                     SecureFi
                                 </Typography>
