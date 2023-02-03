@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu as MenuIcon, Search, ArrowDropDownOutlined, } from "@mui/icons-material";
+import { Menu as MenuIcon, Search, ArrowDropDownOutlined, ChevronLeftOutlined } from "@mui/icons-material";
 import FlexBetween from "components/FlexBetween";
 // import { useDispatch } from "react-redux";
 // import { setMode } from "state";
@@ -28,13 +28,17 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen, user }) => {
             {/* left */}
 
             <FlexBetween>
-                <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-                    <MenuIcon />
+                <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)} sx = {{ m: 0.5}}>
+                    {isSidebarOpen ? (
+                        <ChevronLeftOutlined sx = {{ fontSize: '25px' }} />
+                    ) : (
+                        <MenuIcon sx = {{ fontSize: '25px'}} />
+                    )}
                 </IconButton>
                 <FlexBetween
                   backgroundColor = {theme.palette.background.alt}
                   borderRadius = '9px'
-                  gap = '3rem'
+                  gap = '3 rem'
                   p = '0.1rem 1.5rem'
                 >
                     <InputBase placeholder = 'Search...' />
@@ -44,7 +48,7 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen, user }) => {
                 </FlexBetween>
             </FlexBetween>
 
-            {/* right */}
+            {/* Left */}
 
             <FlexBetween gap = '1.5rem'>
                 {/* <IconButton onClick={() => dispatch(setMode())}>
