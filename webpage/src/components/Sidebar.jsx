@@ -1,11 +1,12 @@
 import React from "react";
 import { Box, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography, useTheme, } from "@mui/material";
-import { SettingsOutlined, ChevronLeft, ChevronRightOutlined, HomeOutlined, ShoppingCartOutlined, Groups2Outlined, ReceiptLongOutlined, 
+import { ChevronLeft, ChevronRightOutlined, HomeOutlined, ShoppingCartOutlined, Groups2Outlined, ReceiptLongOutlined, 
   PublicOutlined, PointOfSaleOutlined, TodayOutlined, CalendarMonthOutlined, AdminPanelSettingsOutlined, TrendingUpOutlined, PieChartOutlined, } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import FlexBetween from "./FlexBetween";
 import me from "assets/me.jpg";
+
 
 const navItems = [
     {
@@ -66,15 +67,22 @@ const navItems = [
     },
   ];
 
+
+
 const Sidebar = ({ drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobile, user }) => {
     const { pathname } = useLocation();
     const [active, setActive] = useState('');
-    const navigate = useNavigate();
+    let navigate = useNavigate();
     const theme = useTheme();
 
     useEffect(() => {
         setActive(pathname.substring(1));
     }, [pathname]);
+
+    const routeChange = () =>{ 
+      let path = '/'; 
+      navigate(path);
+    };
 
   return (
     <Box component = 'nav'>
@@ -96,10 +104,10 @@ const Sidebar = ({ drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobile, us
               }}
             >
                 <Box width = '100%'>
-                    <Box m='1.5rem 2rem 2rem 3rem'>
+                    <Box m = '1.5rem 2rem 2rem 3rem'>
                         <FlexBetween color = {theme.palette.secondary.main}>
                             <Box display= 'flex' alignItems = 'center' gap = '0.5rem'>
-                                <Typography variant = 'h4' fontWeight = 'bold'>
+                                <Typography variant = 'h4' fontWeight = 'bold' onClick={routeChange} cursor='pointer'>
                                     SecureFi
                                 </Typography>
                             </Box>
@@ -128,7 +136,7 @@ const Sidebar = ({ drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobile, us
                                         navigate(`/${lowerCase}`)
                                         setActive(lowerCase)
                                        }}
-                                       sx = {{
+                                       sx = {{ // eslint-disable-next-line
                                         backgroundColor: active === lowerCase ? theme.palette.secondary [300] : 'transparent',
                                         color: active === lowerCase ? theme.palette.primary[600] : theme.palette.secondary[100],
                                        }}
@@ -171,8 +179,8 @@ const Sidebar = ({ drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobile, us
                           {user.occupation}
                         </Typography>
                       </Box>
-                      <SettingsOutlined
-                      sx={{color: theme.palette.secondary[300], fontSize: '25px'}}/>
+                      {/* <SettingsOutlined
+                      sx={{color: theme.palette.secondary[300], fontSize: '25px'}}/> */}
                   </FlexBetween>
                 </Box>
 
