@@ -49,7 +49,7 @@ export const getUserPerformance = async (req, res) => {
     );
 
     res.status(200).json({ user: userWithStats[0], sales: filteredSaleTransactions });
-    
+
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
