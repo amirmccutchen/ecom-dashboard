@@ -12,6 +12,7 @@ import Transactions from 'pages/transactions';
 import Geography from 'pages/geography';
 import Overview from 'pages/overview';
 import Daily from 'pages/daily';
+import Monthly from 'pages/monthly';
 
 const App = () => {
 
@@ -34,6 +35,7 @@ const App = () => {
               <Route path = '/geography'    element = {<Geography />}   />
               <Route path = '/overview'     element = {<Overview  />}   />
               <Route path = '/daily'        element = {<Daily     />}   />
+              <Route path = '/monthly'      element = {<Monthly   />}   />
             </Route>
           </Routes>
         </ThemeProvider>
