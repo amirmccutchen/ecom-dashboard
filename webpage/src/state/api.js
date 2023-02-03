@@ -44,10 +44,10 @@ export const api = createApi({
     }),
 });
 
-export const { 
-    useGetUserQuery, 
-    useGetProductsQuery, 
-    useGetCustomersQuery, 
+export const {
+    useGetUserQuery,
+    useGetProductsQuery,
+    useGetCustomersQuery,
     useGetTransactionsQuery,
     useGetGeographyQuery,
     useGetSalesQuery,

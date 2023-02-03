@@ -1,6 +1,6 @@
 import User from "../models/User.js";
-// import OverallStat from "../models/OverallStat.js";
-// import Transaction from "../models/Transaction.js";
+import OverallStats from "../models/OverallStats.js";
+import Transaction from "../models/Transaction.js";
 
 export const getUser = async (req, res) => {
   try {
@@ -25,7 +25,7 @@ export const getDashboardStats = async (req, res) => {
       .sort({ createdOn: -1 });
 
     /* Overall Stats */
-    const overallStat = await OverallStat.find({ year: currentYear });
+    const overallStat = await OverallStats.find({ year: currentYear });
 
     const {
       totalCustomers,
