@@ -22,7 +22,7 @@ The following technologies were used in the development of this application:
 ## Usage
 To run this application on your local machine, you'll need to have Node.js installed, as well as a MongoDB database set up. Once completing these prerequisites, follow these steps:
 1. Clone the repository
-2. `cd` into the `server` folder
+2. `cd` into the `server` directory
 3. Install the required dependencies using `npm i`
 4. Retrieve your `MONGO_URL` from MongoDB with your password inserted and paste it into a newly created .env file, as well as assign a `PORT` for the server to run locally on
 5. Uncomment lines 50-55 in `index.js` within the `src` directory to initialize your data 
