@@ -20,7 +20,7 @@ The following technologies were used in the development of this application:
 - Git for version control
 
 ## Usage
-To run this application on your local machine, you'll need to have Node.js and MongoDB installed. Once you have those set up, follow these steps:
+To run this application on your local machine, you'll need to have Node.js installed, as well as a MongoDB database set up. Once completing these prerequisites, follow these steps:
 1. Clone the repository
 2. `cd` into the `server` folder
 3. Install the required dependencies using `npm i`
