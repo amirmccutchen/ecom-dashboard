@@ -17,7 +17,7 @@ The following technologies were used in the development of this application:
 - React for building the user interface
 - Redux for state management
 - Material UI for styling and component design
-- Git for version control.
+- Git for version control
 
 ## Usage
 To run this application on your local machine, you'll need to have Node.js and MongoDB installed. Once you have those set up, follow these steps:
