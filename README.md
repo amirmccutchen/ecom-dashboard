@@ -1,5 +1,5 @@
 # SecureFi Dashboard
-Welcome to SecureFi! This is a web-based dashboard application that provides a visual representation of business statistics.
+Welcome to SecureFi! This is a full-stack web dashboard application that provides a visual representation of business statistics.
 
 ## Key Features
 - Interactive charts to display data in a user-friendly way
