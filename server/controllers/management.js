@@ -24,9 +24,13 @@ export const getUserPerformance = async (req, res) => {
 
     const userWithStats = await User.aggregate([
 
-      // mongo aggregate call querying specific id
+      // mongo aggregation call querying specific id
+
+      // converting req id into mongodb objectid, then finding user that has the specific id
 
       { $match: { _id: new mongoose.Types.ObjectId(id) } },
+
+      // looking up affiliate stats table, then combining the user id data with the affiliate stat data to an array called affiliateStats, similar to a sql join
       
       {
         $lookup: {
@@ -37,6 +41,8 @@ export const getUserPerformance = async (req, res) => {
         },
       },
 
+      // flattening affilateStats array
+
       { $unwind: '$affiliateStats' },
 
     ]);
@@ -46,6 +52,8 @@ export const getUserPerformance = async (req, res) => {
         return Transaction.findById(id);
       })
     );
+
+    // not displaying empty transaction data
 
     const filteredSaleTransactions = saleTransactions.filter(
       (transaction) => transaction !== null
