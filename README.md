@@ -1,4 +1,4 @@
-# You can view the deployed app here: https://securefi-dashboard-client.onrender.com/dashboard
+# You can view the deployed app here: https://securefi-dashboard-client.onrender.com/
 
 # SecureFi Dashboard
 Welcome to SecureFi! This is a full-stack web dashboard application that provides a visual representation of business statistics.
