@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import { Menu as MenuIcon, Search, ArrowDropDownOutlined, ChevronLeftOutlined } from "@mui/icons-material";
 import FlexBetween from "components/FlexBetween";
-// import { useDispatch } from "react-redux";
-// import { setMode } from "state";
 import me from "../assets/me.jpg";
 import { AppBar, Button, Box, Typography, IconButton, InputBase, Toolbar, Menu, MenuItem, useTheme } from "@mui/material";
 
 const Navbar = ({ isSidebarOpen, setIsSidebarOpen, user }) => {
-    // const dispatch = useDispatch();
     const theme = useTheme();
 
     const [anchorEl, setAnchorEl] = useState(null);
@@ -48,19 +45,9 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen, user }) => {
                 </FlexBetween>
             </FlexBetween>
 
-            {/* Left */}
+            {/* Right */}
 
             <FlexBetween gap = '1.5rem'>
-                {/* <IconButton onClick={() => dispatch(setMode())}>
-                    {theme.palette.mode === 'dark' ? (
-                        <DarkModeOutlined sx = {{ fontSize: '25px'}} />
-                    ) : (
-                        <LightModeOutlined sx = {{ fontSize: '25px'}} />
-                    )}
-                </IconButton> */}
-                {/* <IconButton>
-                    <SettingsOutlined sx = {{ fontSize: '25px'}} />
-                </IconButton> */}
 
                 <FlexBetween>
                     <Button 
@@ -90,8 +77,6 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen, user }) => {
                           {user.occupation}
                         </Typography>
                       </Box>
-                      {/* <SettingsOutlined
-                      sx={{color: theme.palette.secondary[300], fontSize: '25px'}}/> */}
                       <ArrowDropDownOutlined sx = {{ color: theme.palette.secondary[300], fontSize: '25px' }} />
                     </Button>
                     <Menu anchorEl = {anchorEl} open = {isOpen} onClose ={handleClose} anchorOrigin = {{vertical: 'bottom', horizontal: 'center'}}>
@@ -102,7 +87,7 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen, user }) => {
             </FlexBetween>
         </Toolbar>
     </AppBar>
-  )
-}
+  );
+};
 
 export default Navbar;
