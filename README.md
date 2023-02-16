@@ -25,9 +25,9 @@ To run this application on your local machine, you'll need to have Node.js insta
 2. `cd` into the `server` directory
 3. Install the required dependencies using `npm i`
 4. Retrieve your `MONGO_URL` from MongoDB with your password inserted and paste it into a newly created .env file, as well as assign a `PORT` for the server to run locally on
-5. Uncomment lines 50-55 in `index.js` within the `src` directory to initialize your data 
+5. Uncomment lines 15-21 and 50-55 in `index.js` within the `src` directory to initialize your data 
 6. Start the server and send your data to MongoDB with `npm run dev`
-7. Re-comment lines 50-55 to avoid sending duplicate data to your DB on subsequent server starts or file changes
+7. Re-comment lines 15-21 and 50-55 to avoid sending duplicate data to your DB on subsequent server starts or file changes
 8. `cd ..` then `cd webpage` to reach the front end of the project
 9. Install the required dependencies using `npm i`
 10. Create a `.env.local` file
