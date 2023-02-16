@@ -50,12 +50,14 @@ export const getCustomers = async (req, res) => {
       };
 }
 
-// get transactions
+// get transactions w/ ss pagination
 
 export const getTransactions = async (req, res) => {
   try {
     // sort parameters
     const { page = 1, pageSize = 20, sort = null, search = '' } = req.query;
+    
+    //parsing sort parameter
 
     const generateSort = () => {
       const sortParsed = JSON.parse(sort);
@@ -66,6 +68,8 @@ export const getTransactions = async (req, res) => {
       return sortFormatted;
     };
     const sortFormatted = Boolean(sort) ? generateSort() : {};
+
+    // result of 
 
     const transactions = await Transaction.find({
       $or: [
