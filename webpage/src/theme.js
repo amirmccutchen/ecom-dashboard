@@ -1,4 +1,4 @@
-// color design tokens export
+// color design tokens 
 export const tokensDark = {
     grey: {
       0: "#EAADCA",
